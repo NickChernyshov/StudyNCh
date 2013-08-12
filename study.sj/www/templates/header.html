@@ -1,0 +1,91 @@
+			<!--site header -->
+<?php
+
+include_once("logic/bd.php");
+
+?>
+<div id="header">
+    <div id="headerDeliveryInfo">
+        <img src="media/images/truck.png" align="left"> <font class="header_large">delivery free</font></br>
+        <font class="header_middle">when you order for <font class="header_marking"> 1000</font> $ and more</font></br>
+        <font class="header_bottom">delivery by newmail to the any city Ukraine is for free</font>
+    </div>
+	<div id="error">
+<?php
+	if (isset($_POST['submit'])){				
+			$login = $_POST['login']; 
+			$password=$_POST['password']; 
+				if ((empty($login)) || (empty($password))){
+					unset($login);						
+					unset($password);
+					echo '<font color="red"><img border="0" src="images/error.gif" align="middle" alt="Enter login!"> All field need to be filled! </font></br>';
+					//exit("<meta http-equiv='Refresh' content='1'>");
+				} 
+		
+
+		//$login = stripslashes($login); //transform -//- in -/-
+		//$login = htmlspecialchars($login);	//transform spacial symbols to html chars
+
+		//$password = stripslashes($password);
+		//$password = htmlspecialchars($password);
+
+		else 	{
+		$login = htmlspecialchars($login);
+		$password = htmlspecialchars($password);
+		
+		$login = trim($login);
+		$password = trim($password);
+
+		$password = md5($password);//coding password
+
+		$user = mysql_query("SELECT id FROM users2 WHERE login='$login' AND password='$password'");
+		$id_user = mysql_fetch_array($user);
+		if (empty($id_user['id'])){
+			echo '<br><font color="red"><img border="0" src="images/error.gif" > Wrong password or login! </font><br>';
+			//exit("<meta http-equiv='Refresh' content='1'>");
+			unset($login);	//clear $login
+			unset($password);	//clear $password
+	}	else	 {   
+		$_SESSION['loguser']['password']=$password; 
+		$_SESSION['loguser']['login']=$login; 
+		$_SESSION['loguser']['id']=$id_user;			
+		}
+//exit("<meta http-equiv='Refresh' content='0; URL=../index.php'>");
+	}
+}
+?>	
+	</div>
+    <div id="headerLogPage">
+<?php
+	if(empty($login) and empty($password)){
+	print <<<HERE
+	<form method="post">
+		</br>
+		<div class="inputLabel">
+			<label>Login:</label>
+		</div>
+		<div class="inputField">
+			<input name="login" type="text" size="10px">
+		</div>
+		<div class="inputLabel">
+			<label>Password:</label>
+		</div>
+		<div class="inputField">
+			<input name="password" type="password" size="10"></br>
+		</div>
+		<div class="button">
+			<input type="submit" name="submit" value="OK">
+			<input type="reset" value="Reset">
+		</div>
+		<div>				
+				<a class="registration" href="?page=4">Registration</a>
+		</div>	
+	</form>
+HERE;
+}	else 	{
+	echo "<br>Hello, <strong>{$login}</strong> | <a  style='color:#FF1493' href='logic/logout.php'>LogOut</a><br>This is visiable only for registered users</br>
+			<a style='color:#90EE90' href='?page=5'>Profile</a>";			/*#90EE90 - LightGreen*/
+}
+?>
+	</div>    
+</div>
