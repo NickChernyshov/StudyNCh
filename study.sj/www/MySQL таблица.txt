@@ -1,0 +1,53 @@
+CREATE TABLE  `users2` (
+ `id` INT NOT NULL AUTO_INCREMENT ,
+ `login` VARCHAR( 20 ) NOT NULL ,
+ `password` VARCHAR( 35 ) NOT NULL , 
+ `firstName` VARCHAR( 20 ) NULL,
+ `lastName` VARCHAR( 20 ) NULL,
+ `street` VARCHAR( 15 ) NULL,
+ `building` VARCHAR ( 4 ) NULL,
+ `flat` VARCHAR ( 4 ) NULL,
+ `phone` VARCHAR( 15 ) NOT NULL,
+ `email` VARCHAR( 15 ) NOT NULL ,
+ `image` VARCHAR ( 20 ) NOT NULL,
+PRIMARY KEY (  `id` )
+);
+
+
+
+
+CREATE TABLE  `articles` ( 
+ `id` INT NOT NULL AUTO_INCREMENT ,
+ `autor` VARCHAR( 20 ) NOT NULL ,
+ `title` VARCHAR( 35 ) NOT NULL , 
+ `article` VARCHAR( 250 ) 	NOT NULL, 
+    PRIMARY KEY (  `id` )
+);
+
+
+
+
+CREATE TABLE  IF NOT EXISTS `rates` ( 
+			`id` INT NOT NULL AUTO_INCREMENT ,
+			`light` VARCHAR( 20 ) NULL ,
+			`gas` VARCHAR( 20 ) NULL , 
+			`water` VARCHAR( 20 ) , 
+			`sewage` VARCHAR( 20 ) NULL , 
+			`trash` VARCHAR( 20 ) NULL , 
+			`house` VARCHAR( 20 ) NULL , 
+			`TV` VARCHAR( 20 ) NULL ,	
+			`idRates` VARCHAR( 20 ),
+		PRIMARY KEY (  `id` ) 
+);
+
+
+
+CREATE TABLE  `indexPayment` (
+ `id` INT NOT NULL AUTO_INCREMENT ,
+ `login` VARCHAR( 20 ) NOT NULL ,
+ `lastLight` VARCHAR( 10 ) NULL , 
+ `lastGas` VARCHAR( 10 ) NULL,
+ `lastWaterKitchen` VARCHAR( 10 ) NULL,
+ `lastWaterWC` VARCHAR( 10 ) NULL, 
+PRIMARY KEY (  `id` )
+);
