@@ -1,0 +1,297 @@
+body {
+    margin: 0px;
+	padding:0px;
+}
+
+#header {
+    margin: 0px;
+	padding:0px;
+    background: #00BFFF;	/*DeepSkyBlue*/
+    width: 1346px;
+    height: 120px;
+	position:absolute;
+}
+
+#headerDeliveryInfo {
+    padding: 10px;
+margin:0px;
+    background: #2E8B57;	/*SeaGreen*/
+    width: 570px;
+    height: 100px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#error	{
+	padding: 5px;
+	background:transparent;
+	width:500px;
+	height:60px;
+	position:absolute;
+	left:45%;
+	top:20px;
+}
+
+#headerLogPage {
+padding: 0px;
+margin:0px;
+    background: transparent;
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    left: 75%;
+    top: 0px;
+}
+
+div.inputLabel	{
+	float:left;
+	padding-left:10px;
+}
+
+div.inputLabelNotMarked	{
+	float:left;
+	padding-left:20px;
+}
+
+div.markedField	{
+	float:left;
+	padding-left:0px;
+	color:#FF0000;				/*red*/
+}
+
+div.inputField	{
+	padding-left:75px;
+}
+
+div.inputFieldRegistration	{
+	padding-left:150px;	
+}
+
+div.inputFieldRegistrationCheck	{
+	padding-left:150px;
+	
+}
+
+div.checklog_status	{
+padding-left:150px;
+
+}
+
+div.note	{
+padding-top:80px;
+}
+
+div.submitButtonProfile	{
+padding-top:250px;
+}
+
+div.submitButtonReg	{
+padding-top:30px;
+}
+
+div.error	{
+padding-top:10px;
+padding-left:200px;
+}
+
+div.inputFieldProfile	{
+	padding-left:220px;
+}
+
+div.button	{
+	float:left;
+}
+
+a.registration	{
+	color:#FFFF00;				/*yellow*/
+	font-size:20px;
+	padding-left:5px;
+}
+
+font.header_large {
+    padding-left: 10px;
+    font-size: 30px;
+    font-family: "arial";
+    font-weight: bold;
+    color: #FFA500;				/*orange*/
+    text-transform: uppercase;
+}
+
+font.header_middle {
+    padding-left: 10px;
+    font-size: 16px;
+    font-family: "arial";
+    color: #C0C0C0;				/*silver*/
+    text-transform: uppercase;
+}
+
+font.header_marking {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF;				/*white*/
+}
+
+font.header_bottom {
+    padding-left: 10px;
+    font-size: 13px;
+    font-family: "arial";
+    color: #00FF00;				/*lime*/
+    text-transform: uppercase;
+}
+
+#menu {
+padding:0px;
+margin:0px;
+    background: #FFDEAD;			/*NavajoWhite*/
+	position:absolute;
+	top:120px;
+    width: 369px;
+    height: 770px;
+}
+
+.fixed {
+    position: absolute;
+    left: 55px;
+    top: 200px;
+    border-left: 15px solid red;
+}
+
+.ul_none {
+    list-style-type: none;
+    margin: 0px;
+    padding: 15px;
+    padding-left: 25px;
+}
+
+.menu {
+    display: block;
+    width: 180px;
+    padding-left: 15px;
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu:hover {
+    background-color: red;
+    color: green;
+    border-radius: 10px;
+}
+
+#content {
+padding-top:20px;
+padding-left:20px;
+padding-right:10px;
+margin:0px;
+	background: #FDF5E6;			/*oldlace*/
+    width: 562px;
+    height: 750px;
+    position: absolute;
+    left: 369px;
+    top: 120px;
+overflow:auto;
+}
+
+div.numPage	{
+text-align:center;
+}
+
+div.labelRates	{
+text-align:center;
+font-size: 18px;
+font-family: "arial";
+}
+
+div.inputPaymentLabel	{
+	padding-top:5px;
+	float:left;
+	padding-left:10px;
+}
+
+div.inputPaymentField	{
+	
+	padding-top:5px;
+	padding-left:150px;	
+}
+
+div.inputAdressLabel	{
+	padding-top:5px;
+	float:right;
+	padding-left:10px;;	
+}
+
+div.submitPaymentButton	{
+	padding-left:300px;
+}
+
+div.adress	{
+text-align:center;
+font-size: 20px;
+}
+
+#rss_header	{
+width: 385px;
+height: 30px;
+position: absolute;
+top: 120px;
+left: 961px;
+color: #FFD700;		/*Gold*/
+font-size: 24px;
+font-weight: bold;
+text-align: center;
+background: #F4A460; 	/*SandyBrown*/
+}
+
+#rssnews	{
+padding-left:0px;
+margin:0px;
+width: 385px;
+height: 740px;
+position: absolute;
+top: 150px;
+left: 961px;
+background: #F5DEB3;	/*Wheat*/
+overflow:auto;
+
+}
+
+a.back	{
+	color:blue;				
+	font-size:25px;
+	padding-left:5px;
+	
+}
+
+
+#footer {
+padding:0px;
+margin:0px;
+    background: #8B0000;			/*darkred*/
+    width: 1346px;
+    height: 50px;
+	position:absolute;
+	top:890px;
+}
+
+#footerLable {
+    padding: 0px;
+    margin: 0px;
+    background: transparent;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    left: 90%;
+    top: 0px;
+}
+
+font.footer {
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+    font-family: "arial";
+    color: #00FF00;					/*lime*/
+    text-align: center;
+}
