@@ -1,7 +1,16 @@
+* {
+    margin: 0;
+    padding-top: 5px;
+   }
+
 body {
     margin: 0px;
 	padding: 0px; 
 	}
+	
+
+
+
 
 #headerTopBorder	{
 	background-image: url("/media/images/headerBorder.jpg");
@@ -41,7 +50,7 @@ body {
 	width:500px;
 	height:60px;
 	position:absolute;
-	left:40%;
+	left:570px;
 	top:90px;
 	}
 
@@ -52,7 +61,7 @@ body {
     width: 300px;
     height: 100px;
     position: absolute;
-    left: 50%;
+    left: 800px;
     top: 30px;
 	}
 
@@ -106,9 +115,15 @@ div.markedField	{
 	}
 
 div.inputField	{
-	padding-left:75px;
+	width: 200px;
+	padding-left:80px;
 	}
 
+	
+	.user {
+    width: 120px; 
+   } 
+   
 div.inputFieldRegistration	{
 	padding-left:150px;	
 	}
