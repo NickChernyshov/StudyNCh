@@ -1,0 +1,2 @@
+<div id="headerLogPage">
+</div>

@@ -1,0 +1,67 @@
+			<!--site header -->
+<?php
+
+include_once("logic/bd.php");
+
+?>
+<div id="headerTopBorder"></div>
+
+<div id="header" class="header">
+    <div id="headerDeliveryInfo">
+        <img src="media/images/php.png" align="left"> 
+		<div id="header_slogan">
+			<font class="header_slogan">Study project</font></br>        
+		</div>
+    </div>
+	
+	
+	<div id="error">
+<?php
+	if (isset($_POST['logIn'])){				
+			$login = $_POST['login']; 
+			$password=$_POST['password']; 
+				if ((empty($login)) || (empty($password))){
+					unset($login);						
+					unset($password);
+					echo '<font color="red"><img border="0" src="media/images/error.gif" align="middle" alt="Enter login!"> All field need to be filled! </font></br>';					
+				} 		
+				else 	{
+		//$login = htmlspecialchars($login);
+		//$password = htmlspecialchars($password);
+		
+		$login = trim($login);
+		$password = trim($password);
+
+		$password = md5($password);//coding password
+
+		$user = mysql_query("SELECT id FROM users WHERE login='$login' AND password='$password'");
+		$id_user = mysql_fetch_array($user);
+		if (empty($id_user['id'])){
+			echo '<br><font color="red"><img border="0" src="media/images/error.gif" > Wrong password or login! </font><br>';
+			unset($login);	//clear $login
+			unset($password);	//clear $password
+	}	else	 {   
+		$_SESSION['loguser']['password']=$password; 
+		$_SESSION['loguser']['login']=$login; 
+		$_SESSION['loguser']['id']=$id_user;			
+		}
+	}
+}
+?>	
+	</div>
+	
+    
+	<div id="headerBottomBorder">
+		<ul class="headerMenu">
+			<li><a class="itemHeaderMenu" href="/index.php?page=1" title="Main">GENERAL</a></li>
+			<li><a class="itemHeaderMenu" href="/index.php?page=2" title="About">ABOUT</a></li>
+			<li><a class="itemHeaderMenu" href="?page=3" title="Contact">CONTACT INFO</a></li>
+			<li><a class="itemHeaderMenu" href="?page=6&currPage=0" title="Articles">ARTICLES</a></li>
+			<li><a class="itemHeaderMenu" href="?page=8" title="Payment">PAYMENT</a></li>
+		</ul>
+	</div>
+	
+</div>
+
+
+
