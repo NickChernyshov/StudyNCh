@@ -4,7 +4,7 @@
 			</br>
 			
 					<!-- registration form with fields for registration -->
-		<form method="POST" enctype="multipart/form-data">			
+		<form method="POST" name="reg" enctype="multipart/form-data">			
 			<div class="markedField">
 				<label>*</label></div>
 			<div class="inputLabel">
@@ -20,7 +20,7 @@
 			<div class="inputLabel">
 				<label>Password:</label></div>
 			<div class="inputFieldRegistration">
-				<input type="password" size="10" name="password"></div>
+				<input type="password" size="10" name="password" onblur="checkPassword();"></div>
 		  
 			<div class="markedField">
 				<label>*</label></div>
@@ -190,6 +190,21 @@
 			</div>
 		</div>
 <script src="media/scripts/check.js"></script>
+<script type="text/javascript">
+	function checkPassword()
+	{
+		valid = true;
+
+			if ( document.reg.password.value == "" )
+			{
+					alert ( "Please fill in password field" );
+					document.reg.password.focus();
+					valid = false;
+			}
+
+			return valid;
+	}
+</script>
 
 
 	

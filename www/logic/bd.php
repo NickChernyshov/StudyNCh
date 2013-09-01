@@ -1,6 +1,6 @@
 <?php
 session_start();
-mysql_connect ("localhost", "root", "lifeisgood");
+mysql_connect ("localhost", "root", "lifeisgood1984");
 mysql_select_db ("reg");
 mysql_query("SET NAMES utf8");
 
